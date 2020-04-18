@@ -95,12 +95,21 @@ if(options.special){
 
 for ( var i = 0; i < options.passwordLength; i++ ){
 
-  //random generates first and then floor rounds the number down
+ if (requiredCharacters[i]){
+
+  password += requiredCharacters[i];
+
+ }
+
+ else {
+
   password += possibleCharacters[ Math.floor(Math.random() * possibleCharacters.length)];
+ }
 
-  
 
-}
+ 
+
+  }
 
 console.log(password);
 
